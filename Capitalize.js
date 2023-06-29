@@ -1,9 +1,13 @@
 function capitalize(str) {
-    const newStr = str.charAt(0).toUpperCase() + str.slice(1);
+  //to Capitalize first letter of string using this method
+  const newStr = str.charAt(0).toUpperCase() + str.slice(1)
 
-    return newStr;
+  return newStr
 }
-const Str = prompt('Enter a string: ');
+const Str = prompt("Enter a string: ")
 const res = capitalize(Str)
 
-console.log(res);
+console.log(res)
+
+//input: "devendra"
+//output: "Devendra"

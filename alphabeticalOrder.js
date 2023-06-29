@@ -1,4 +1,7 @@
-function alphabeticalOrder(str){
- return str.split('').sort().join('');   
+function alphabeticalOrder(str) {
+  //Sorting given string to alphabetical order
+  return str.split("").sort().join("")
 }
-console.log(alphabeticalOrder("devendra"));
+console.log(alphabeticalOrder("devendra"))
+
+//output: "addeenrv"
