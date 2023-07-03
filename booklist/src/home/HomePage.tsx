@@ -5,6 +5,9 @@ class HomePage extends React.Component {
   render() {
     return (
       <>
+        <div className='App'>
+          <h1>Home Page</h1>
+        </div>
         <nav className='navbar navbar-expand-lg navbar-light bg-light'>
           <Link className='navbar-brand' to={"/"}>
             Home
@@ -23,20 +26,17 @@ class HomePage extends React.Component {
           <div className='collapse navbar-collapse' id='navbarNavAltMarkup'>
             <div className='navbar-nav'>
               <Link className='nav-item nav-link' to={"/movie"}>
-                Movie list
+                Movies
               </Link>
               <Link className='nav-item nav-link' to={"/character"}>
-                characters
+                Characters
               </Link>
               <Link className='nav-item nav-link' to={"/book"}>
-                book list
+                Book list
               </Link>
             </div>
           </div>
         </nav>
-        <div className='App'>
-          <h1>Home Page</h1>
-        </div>
       </>
     );
   }

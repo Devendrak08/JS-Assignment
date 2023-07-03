@@ -1,9 +1,8 @@
 import axios from "axios";
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import {Button, Card, Col, Row} from "react-bootstrap";
+import { Button, Card, Col, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
-
 
 class MoviesList extends React.Component {
   constructor(props: any) {
@@ -45,16 +44,28 @@ class MoviesList extends React.Component {
                 }
               />
               <Card.Body>
-                <Card.Title><h2>{movie.name}</h2></Card.Title>
-                <Card.Text><b>Movies budget:-</b>{movie.budgetInMillions}</Card.Text>
-                <Card.Text><b>boxOfficeRevenueInMillions:-</b> {movie.boxOfficeRevenueInMillions}</Card.Text>
-                <Button>button</Button>
+                <Card.Title>
+                  <h2>{movie.name}</h2>
+                </Card.Title>
+                <Card.Text>
+                  <b>Movies budget:-</b>
+                  {movie.budgetInMillions}
+                </Card.Text>
+                <Card.Text>
+                  <b>boxOfficeRevenueInMillions:-</b>{" "}
+                  {movie.boxOfficeRevenueInMillions}
+                </Card.Text>
+                <Button>
+                  <Link className='nav-item nav-link' to={`${movie._id}/quote`}>
+                    click me
+                  </Link>
+                </Button>
               </Card.Body>
             </Card>
           </Col>
         ))}
         <div>
-        <Link to={"/"}> Go to Home</Link>
+          <Link to={"/"}> Go to Home</Link>
         </div>
       </Row>
     );
@@ -62,5 +73,3 @@ class MoviesList extends React.Component {
 }
 
 export default MoviesList;
-
-

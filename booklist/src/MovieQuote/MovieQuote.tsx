@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import axios from "axios";
 
 class MovieQuote extends React.Component {
@@ -7,32 +7,35 @@ class MovieQuote extends React.Component {
 
     this.state = {
       quotes: [],
-      id: {},
+      id: this.props.match.params.id
     };
   }
   componentDidMount(): void {
+    // const { id }: any = this.props.match.params;
     axios
-      .get(`https://the-one-api.dev/v2/movie/5cd95395de30eff6ebccde5c/quote`, {
+      .get(`https://the-one-api.dev/v2/movie/${id}/quote`, {
         headers: {
           Accept: "application/json",
           Authorization: "Bearer Ws6KjZ59Rn5XzGEFVca_",
         },
       })
       .then((res) => {
-        console.log(res, "++++++++++++++++++++");
         this.setState({ quotes: res.data.docs });
       });
   }
   render() {
     const { quotes }: any = this.state;
     return (
-      <div>
+      <Fragment>
         {quotes.map((quote: any, index: any) => {
-          return <div key={index}> {quote.dialog}</div>;
+          return <p key={index}> {quote.dialog}</p>;
         })}
-      </div>
+      </Fragment>
     );
   }
 }
 
 export default MovieQuote;
+
+
+// 5cd95395de30eff6ebccde5d
