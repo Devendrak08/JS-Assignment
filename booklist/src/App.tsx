@@ -14,12 +14,6 @@ import MovieQuote from './MovieQuote/MovieQuote';
 function App() {
   return (
     <>
-      {/* <Page /> */}
-      <br />
-      {/* <MoviesList />  */}
-      <br />
-      {/* <Character /> */}
-
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/movie" element={<MoviesList />} />
